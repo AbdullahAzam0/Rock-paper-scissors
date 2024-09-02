@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="name-modal" class="modal">
+      <div class="modal-content">
+        <h2>Enter Your Name and Round Limit</h2>
+        <input type="text" id="player-name" placeholder="Your Name" required />
+        <input
+          type="number"
+          id="round-limit"
+          placeholder="Number of Rounds"
+          min="1"
+          required
+        />
+        <button id="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div id="game-container" class="container" style="display: none">
+      <h1>Rock Paper Scissors</h1>
+
+      <div class="choices">
+        <div class="choice" id="rock" data-choice="rock">
+          <img src="rock.png" alt="Rock" />
+        </div>
+        <div class="choice" id="paper" data-choice="paper">
+          <img src="paper.png" alt="Paper" />
+        </div>
+        <div class="choice" id="scissors" data-choice="scissors">
+          <img src="scissors.png" alt="Scissors" />
+        </div>
+      </div>
+
+      <div class="score-board">
+        <div class="score">
+          <p id="user-score">0</p>
+          <p id="player-label">You</p>
+        </div>
+        <div class="score">
+          <p id="comp-score">0</p>
+          <p>Opponent</p>
+        </div>
+      </div>
+
+      <div class="msg-container">
+        <p id="msg">Play your move</p>
+      </div>
+
+      <button id="reset-btn">Reset Game</button>
+    </div>
+
+    <div id="winner-popup" class="popup">
+      <div class="popup-content">
+        <h2 id="final-winner-message"></h2>
+        <div class="scorecard">
+          <p id="user-score-display">
+            Player Score: <span id="final-user-score"></span>
+          </p>
+          <p>Opponent Score: <span id="final-comp-score"></span></p>
+        </div>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ by Abdullah</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
